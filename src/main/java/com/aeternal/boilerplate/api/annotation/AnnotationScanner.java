@@ -1,4 +1,4 @@
-package com.aeternal.boilerplate.annotation;
+package com.aeternal.boilerplate.api.annotation;
 
 import com.aeternal.boilerplate.Boilerplate;
 import net.minecraftforge.fml.ModList;

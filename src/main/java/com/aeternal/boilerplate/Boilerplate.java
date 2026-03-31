@@ -1,5 +1,6 @@
 package com.aeternal.boilerplate;
 
+import com.aeternal.boilerplate.registry.AnnotationRegistryProcessor;
 import com.aeternal.boilerplate.integration.IntegrationManager;
 import com.aeternal.boilerplate.registry.ModBlockEntities;
 import com.aeternal.boilerplate.registry.ModBlocks;
@@ -32,7 +33,7 @@ public class Boilerplate {
 
         // Lifecycle events
         modEventBus.addListener(this::commonSetup);
-
+        AnnotationRegistryProcessor.init(modEventBus);
         // Client-only setup via DistExecutor
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
             com.aeternal.boilerplate.client.ClientSetup.init(modEventBus);
